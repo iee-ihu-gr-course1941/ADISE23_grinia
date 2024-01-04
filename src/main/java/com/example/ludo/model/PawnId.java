@@ -1,4 +1,4 @@
-package com.example.ludo;
+package com.example.ludo.model;
 
 import java.io.Serializable;
 

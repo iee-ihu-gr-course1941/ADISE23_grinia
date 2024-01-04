@@ -1,4 +1,4 @@
-package com.example.ludo;
+package com.example.ludo.model;
 
 import jakarta.persistence.*;
 
@@ -27,45 +27,13 @@ public class Pawn {
         // Default constructor
     }
 
-    public Pawn(Pawns pawnName) {
-        this(pawnName, -1);
+    public Pawn(Pawns pawnName, String username) {
+        this(pawnName, -1, username);
     }
 
-//    public Pawn(Pawns pawnName, int x) {
-//        this.pawnName = pawnName;
-//        this.x = x;
-//        switch (pawnName){
-//            case Pawns.R1:
-//                this.y = 0;
-//                break;
-//            case Pawns.R2:
-//                this.y = 1;
-//                break;
-//            case Pawns.R3:
-//                this.y = 2;
-//                break;
-//            case Pawns.R4:
-//                this.y = 3;
-//                break;
-//            case Pawns.B1:
-//                this.y = 4;
-//                break;
-//            case Pawns.B2:
-//                this.y = 5;
-//                break;
-//            case Pawns.B3:
-//                this.y = 6;
-//                break;
-//            case Pawns.B4:
-//                this.y = 7;
-//                break;
-//            default:
-//                this.y = -1;
-//        }
-//    }
-
-    public Pawn(Pawns pawnName, int x) {
+    public Pawn(Pawns pawnName, int x, String username) {
         this.pawnName = pawnName;
+        this.username = username;
         this.x = x;
         switch (pawnName){
             case Pawns.R1, Pawns.B1:

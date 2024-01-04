@@ -1,5 +1,7 @@
-package com.example.ludo;
+package com.example.ludo.db.services;
 
+import com.example.ludo.db.repos.PawnPositionRepository;
+import com.example.ludo.model.Pawn;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,10 @@ public class PawnPositionService {
 
     public void savePawn(Pawn pawn) {
         pawnPositionRepository.save(pawn);
+    }
+
+    public void deleteAll() {
+        pawnPositionRepository.deleteAll();
     }
 
 }
