@@ -10,9 +10,8 @@ import java.util.Random;
 
 public class Player {
 
-    // TODO change this back to 46
-//    protected static final int BOARD_ROWS = 46;
-    protected static final int BOARD_ROWS = 27;
+    protected static final int BOARD_ROWS = 46;
+//    protected static final int BOARD_ROWS = 27;
     protected static final int BOARD_COLUMNS = 4;
     protected static final int SIX_DIE = 6;
 

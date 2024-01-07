@@ -108,8 +108,9 @@ public class BoardV2 {
     }
 
     public void setP1(String username) {
-//        this.p1 = new Player(username, Color.RED, 0, 45, 41, this);
-        this.p1 = new Player(username, Color.RED, 0, 26, 24, this);
+        this.p1 = new Player(username, Color.RED, 0, 45, 41, this);
+        // this is for 27 rows board (testing)
+//        this.p1 = new Player(username, Color.RED, 0, 26, 24, this);
         p1.setShouldRoll(true);
 
         // update game status in the database
@@ -127,8 +128,9 @@ public class BoardV2 {
     public void setP2(String username) throws InvalidUsernameException{
         if(username.equals(p1.getUsername())) throw new InvalidUsernameException();
 
-//        this.p2 = new Player(username, Color.BLUE, 20, 19, 15, this);
-        this.p2 = new Player(username, Color.BLUE, 12, 11, 9, this);
+        this.p2 = new Player(username, Color.BLUE, 20, 19, 15, this);
+        // this is for 27 rows board (testing)
+//        this.p2 = new Player(username, Color.BLUE, 12, 11, 9, this);
         p2.setShouldRoll(false);
 
         // update game status in the database

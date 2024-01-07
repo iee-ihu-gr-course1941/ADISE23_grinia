@@ -21,8 +21,35 @@ public class LudoControllerV2 {
 
     @GetMapping("/rules")
     public String gameRules() {
-        // TODO
-        return "Game rules";
+        String rules = "Game Rules:\n" +
+                "\n" +
+                "Endpoint: /ludo/rules\n" +
+                "Instructions: Welcome to Ludo! To view the game rules, simply navigate to /ludo/rules. This will help you understand how to play and win.\n" +
+                "\n" +
+                "Initialize User (Login):\n" +
+                "Endpoint: /ludo/play/{username}\n" +
+                "Instructions: To start playing, you need to log in. Replace {username} with your chosen username by visiting /ludo/play/{your-username}. You'll receive a warm welcome and be ready to roll the dice!\n" +
+                "\n" +
+                "Roll Die:\n" +
+                "Endpoint: /ludo/play/{username}/roll\n" +
+                "Instructions: After logging in, roll the dice by going to /ludo/play/{your-username}/roll. The result will determine how many spaces your pawn can move. If you roll a 6, you get another turn!\n" +
+                "\n" +
+                "Move Pawn:\n" +
+                "Endpoint: /ludo/play/{username}/move/{pawn}\n" +
+                "Instructions: When you roll the dice, you may be able to move your pawn. Visit /ludo/play/{your-username}/move/{your-pawn} to make your move. If you roll a 6, you can choose another pawn or roll again.\n" +
+                "\n" +
+                "Get Available Moves:\n" +
+                "Endpoint: /ludo/play/{username}/moves\n" +
+                "Instructions: Wondering where to move? Check available moves at /ludo/play/{your-username}/moves. This will show you where you can strategically place your pawn based on the dice roll.\n" +
+                "\n" +
+                "Get Game Status:\n" +
+                "Endpoint: /ludo/status\n" +
+                "Instructions: To see how the game is progressing, head to /ludo/status. This will display the overall game status and who's currently playing.\n" +
+                "\n" +
+                "Reset Game:\n" +
+                "Endpoint: /ludo/reset\n" +
+                "Instructions: Need a fresh start? Visit /ludo/reset to reset the game. All values will be restored to default, and you can begin anew.";
+        return rules;
     }
 
     @PostMapping("/reset")
